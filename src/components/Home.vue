@@ -10,6 +10,7 @@
               placeholder="拆零日期"
               size="large"
               id="startInput"
+              style="margin-bottom: 10px;"
             />
             <el-input
               v-model="endDate"
@@ -18,14 +19,14 @@
               id="endInput"
             />
           </div>
-          <el-button style="margin-left: 0px;" class="btn-style" type="primary" @click="print('print-tag','html')">打印</el-button>
+          <el-button style="margin-left: 0px;" class="btn-style" type="primary" @click="printJS({printable: 'print-tag', type: 'html', scanStyles: true})">打印</el-button>
           <el-button style="margin-left: 0px" class="btn-style" type="danger" @click="resetClick">重置</el-button>
           <el-main/>
         </el-container>
 
-        <div id="print-tag" class="text-font">
+        <div id="print-tag" class="text-font" v-show="true">
           <div>拆零日期：{{ startDate }}</div>
-          <br></br>
+          <br/>
           <div>失效日期：{{ endDate }}</div>
         </div>
       </div>
@@ -35,7 +36,7 @@
   <script lang="ts" setup>
     import { ref } from 'vue'
     import { ElNotification } from 'element-plus'
-    import print from 'print-js'
+    import printJS from 'print-js'
     const startDate = ref('')
     const endDate = ref('')
     const today = new Date();
@@ -86,7 +87,7 @@
   }
 
   .text-font {
-    font-size: 18px
+    font-size: 1px
   }
 
   </style>
