@@ -3,21 +3,29 @@
       <div>
         <el-container>
           <el-header/>
-          <span class="demonstration">填写日期</span>
+          <span class="demonstration">请填写日期</span>
           <div>
-            <el-input
+            <view>
+              拆零日期：
+              <el-input
               v-model="startDate"
               placeholder="拆零日期"
               size="large"
               id="startInput"
-              style="margin-bottom: 10px;"
-            />
-            <el-input
+              style="margin-bottom: 10px;margin-top: 10px"
+              />
+            </view>
+            
+            <view>
+              失效日期：
+              <el-input
               v-model="endDate"
               placeholder="失效日期"
               size="large"
               id="endInput"
+              style="margin-top: 10px"
             />
+            </view>
           </div>
           <el-button style="margin-left: 0px;" class="btn-style" type="primary" @click="printJS({printable: 'print-tag', type: 'html', scanStyles: true})">打印</el-button>
           <el-button style="margin-left: 0px" class="btn-style" type="danger" @click="resetClick">重置</el-button>
