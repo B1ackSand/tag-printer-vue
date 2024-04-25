@@ -24,8 +24,7 @@
 
       <div id="print-tag" class="text-font" v-show="true">
         <div>拆零日期:{{ startDate }}</div>
-        <br></br>
-        <div>失效日期:{{ endDate }}</div>
+        <div style="margin-top: 0.5mm;">失效日期:{{ endDate }}</div>
       </div>
     </div>
   </div>
@@ -92,5 +91,4 @@ const pageStyle = '@media print {#print-tag {font-size: 10px;transform: scale(1)
 }
 
 /* @media print {#print-tag {font-size: 30px;transform: scale(0.6);transform-origin: top left;margin-top: 2mm; margin-left: 2mm;}} */
-
 </style>
