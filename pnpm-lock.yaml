@@ -17,6 +17,9 @@ importers:
       print-js:
         specifier: ^1.6.0
         version: 1.6.0
+      print-js-updated:
+        specifier: ^1.6.1
+        version: 1.6.1
       vue:
         specifier: ^3.4.21
         version: 3.4.24(typescript@5.4.5)
@@ -689,6 +692,9 @@ packages:
   postcss@8.4.38:
     resolution: {integrity: sha512-Wglpdk03BSfXkHoQa3b/oulrotAkwrlLDRSOb9D0bN86FdRyE9lppSp33aHNPgBa0JKCoB+drFLZkQoRRYae5A==, tarball: https://registry.npmmirror.com/postcss/-/postcss-8.4.38.tgz}
     engines: {node: ^10 || ^12 || >=14}
+
+  print-js-updated@1.6.1:
+    resolution: {integrity: sha512-5zSyskU+IHR8CO0CVYIS0GKIiUBwYh5s22XJXBeN5mgMp6hGz/6o/eTS9WtrASpJPaQ6zFFWlRXF33JKEPF4ug==, tarball: https://registry.npmmirror.com/print-js-updated/-/print-js-updated-1.6.1.tgz}
 
   print-js@1.6.0:
     resolution: {integrity: sha512-BfnOIzSKbqGRtO4o0rnj/K3681BSd2QUrsIZy/+WdCIugjIswjmx3lDEZpXB2ruGf9d4b3YNINri81+J0FsBWg==, tarball: https://registry.npmmirror.com/print-js/-/print-js-1.6.0.tgz}
@@ -1434,6 +1440,8 @@ snapshots:
       nanoid: 3.3.7
       picocolors: 1.0.0
       source-map-js: 1.2.0
+
+  print-js-updated@1.6.1: {}
 
   print-js@1.6.0: {}
 
