@@ -22,7 +22,7 @@
         <el-main />
       </el-container>
 
-      <div id="print-tag" class="text-font" v-show="true">
+      <div id="print-tag" class="text-style" v-show="true">
         <div>拆零日期:{{ startDate }}</div>
         <div style="margin-top: 0.5mm;">失效日期:{{ endDate }}</div>
       </div>
@@ -59,7 +59,7 @@ const dateReset = () => {
   })
 }
 
-const pageStyle = '@media print {#print-tag {font-size: 10px;transform: scale(1);transform-origin: top left;}@page {margin:0px;}}'
+const pageStyle = '@media print {#print-tag {font-size: 10px;transform: scale(1);transform-origin: top left;margin-left: 2px;margin-top: 11px;size: portrait;}@page {margin:0px;}}'
 
 </script>
 
@@ -83,11 +83,11 @@ const pageStyle = '@media print {#print-tag {font-size: 10px;transform: scale(1)
 }
 
 .date-input .btn-style {
-  margin-top: 10px
+  margin-top: 10px;
 }
 
-.text-font {
-  font-size: 15px
+.text-style {
+  font-size: 18px;
 }
 
 /* @media print {#print-tag {font-size: 30px;transform: scale(0.6);transform-origin: top left;margin-top: 2mm; margin-left: 2mm;}} */
