@@ -3,17 +3,11 @@ const routes: Array<RouteRecordRaw> = [
     // 项目打开后进入的默认地址
     {
         path: '/',
-        redirect: '/home',
-        meta: {
-          title: 'tag-printer'
-        }
+        redirect: '/home'
     },
     {
         path: '/home',
-        component: () => import('../views/HomeView.vue'),
-        meta: {
-          title: 'tag-printer'
-        }
+        component: () => import('../views/HomeView.vue')
     }
 ]
 const router = createRouter({

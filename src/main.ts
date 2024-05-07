@@ -7,6 +7,7 @@ import 'dayjs/locale/zh-cn'
 import 'element-plus/dist/index.css'
 import App from './App.vue'
 import router from './router'
+import.meta.env.VITE_APP_TITLE
 
 const app = createApp(App)
 
