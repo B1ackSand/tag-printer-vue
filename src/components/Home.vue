@@ -59,7 +59,7 @@ const dateReset = () => {
   })
 }
 
-const pageStyle = '@media print {#print-tag {font-size: 10px;transform: scale(1);transform-origin: top left;margin-left: 2px;margin-top: 11px;size: portrait;}@page {margin:0px;}}'
+const pageStyle = '@media print {#print-tag {font-size: 10px;transform: scale(1);transform-origin: top left;margin: 0px;size: portrait;}@page {margin:0px;}}'
 
 </script>
 

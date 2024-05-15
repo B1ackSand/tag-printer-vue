@@ -15,8 +15,13 @@ export default defineConfig({
     }),
     Components({
       resolvers: [ElementPlusResolver()],
-    }),
+    })
   ],
+  server: {
+    host: '0.0.0.0',
+    port: 8092,
+    open: true
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
