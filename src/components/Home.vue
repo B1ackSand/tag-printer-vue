@@ -1,31 +1,37 @@
 <template>
   <div class="date-input">
     <div>
-      <el-container>
-        <el-header />
-        <span class="demonstration">请填写日期</span>
-        <div>
-          <view>
-            拆零日期：
-            <el-input v-model="startDate" placeholder="拆零日期" size="large" id="startInput"
-              style="margin-bottom: 10px;margin-top: 10px" />
-          </view>
+      <el-container style="width: 100%;">
+        <el-header>
+          <span class="demonstration">请填写日期：</span>
+        </el-header>
 
-          <view>
-            失效日期：
-            <el-input v-model="endDate" placeholder="失效日期" size="large" id="endInput" style="margin-top: 10px" />
-          </view>
-        </div>
-        <el-button style="margin-left: 0px;" class="btn-style" type="primary"
-          @click="printJS({ printable: 'print-tag', type: 'html', scanStyles: false, style: pageStyle })">打印</el-button>
-        <el-button style="margin-left: 0px" class="btn-style" type="danger" @click="resetClick">重置</el-button>
-        <el-main />
+        <el-main>
+          <div>
+            <view>
+              拆零日期：
+              <el-input v-model="startDate" placeholder="拆零日期" size="large" id="startInput"
+                style="margin-bottom: 10px; margin-top: 10px;" />
+            </view>
+            <view>
+              失效日期：
+              <el-input v-model="endDate" placeholder="失效日期" size="large" id="endInput" style="margin-top: 10px" />
+            </view>
+          </div>
+          <div>
+            <el-button class="btn-style" type="primary"
+              @click="printJS({ printable: 'print-tag', type: 'html', scanStyles: false, style: pageStyle })">打印</el-button>
+          </div>
+          <div>
+            <el-button class="btn-style" type="danger" @click="resetClick">重置</el-button>
+          </div>
+
+          <div id="print-tag" class="text-style" style="margin-top: 10px;" v-show="true">
+            <div>拆零日期:{{ startDate }}</div>
+            <div style="margin-top: 0.5mm;">失效日期:{{ endDate }}</div>
+          </div>
+        </el-main>
       </el-container>
-
-      <div id="print-tag" class="text-style" v-show="true">
-        <div>拆零日期:{{ startDate }}</div>
-        <div style="margin-top: 0.5mm;">失效日期:{{ endDate }}</div>
-      </div>
     </div>
   </div>
 </template>
@@ -55,20 +61,19 @@ const dateReset = () => {
   ElNotification({
     title: '重置',
     message: '已重置成功。',
-    duration: 2000,
+    duration: 1451,
   })
 }
 
-const pageStyle = '@media print {#print-tag {font-size: 10px;transform: scale(1);transform-origin: top left;margin: 0px;size: portrait;}@page {margin:0px;}}'
+const pageStyle = '@media print {#print-tag {font-size: 10px;transform: scale(1);transform-origin: top left;margin: 0px;margin-top: 10px;size: portrait;}@page {margin:0px;}}'
 
 </script>
 
 <style scoped>
 .date-input {
   display: flex;
-  width: 100%;
   padding: 0;
-  flex-wrap: wrap;
+  margin: auto;
 }
 
 .date-input .block:last-child {
@@ -78,17 +83,17 @@ const pageStyle = '@media print {#print-tag {font-size: 10px;transform: scale(1)
 .date-input .demonstration {
   display: block;
   color: var(--el-text-color-secondary);
-  font-size: 14px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: large;
 }
 
 .date-input .btn-style {
+  width: 100%;
+  margin: auto;
   margin-top: 10px;
 }
 
 .text-style {
   font-size: 18px;
 }
-
-/* @media print {#print-tag {font-size: 30px;transform: scale(0.6);transform-origin: top left;margin-top: 2mm; margin-left: 2mm;}} */
 </style>
